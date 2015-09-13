@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>抽奖管理</title>
+    <link rel="stylesheet" type="text/css" href="lib/jquery-ui.css"/>
+    <style type="text/css">
+        .ui-timepicker-div .ui-widget-header { margin-bottom: 8px;}
+        .ui-timepicker-div dl { text-align: left; }
+        .ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+        .ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+        .ui-timepicker-div td { font-size: 90%; }
+        .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+        .ui_tpicker_hour_label,.ui_tpicker_minute_label,.ui_tpicker_second_label,.ui_tpicker_millisec_label,.ui_tpicker_time_label{padding-left:20px}
+        .ui-datepicker-title {font-size:13px;}
+        .time_select{width:200px; height:20px; line-height:20px; padding:2px; border:1px solid #d3d3d3}
+    </style>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/lottery.js"></script>
+</head>
+<body>
+<div id="dd">
+    <br>
+    <div id="d1">
+        <span>活动名称: </span>
+        <select id="actName">
+            <option>请选择</option>
+        </select>
+    </div>
+    <br>
+    <div id="d2">
+        <form>
+            <span>奖品名称: </span>
+            <input type="text" id="awardName" class="awardAddClass"/>
+            <span>奖品数量</span>
+            <input type="text" id="awardNum" class="awardAddClass"/>
+            <span>奖品级别</span>
+            <input type="text" id="awardLevel" class="awardAddClass"/>
+            <input type="button" value="添加奖品" id="addAward">
+            <span id="s2"></span>
+        </form>
+    </div>
+
+    <div id="d3">
+        <form>
+            <span>开始时间: </span>
+            <input type="text" id="d3_startTime" class="time_select"/>
+            <span>结束时间: </span>
+            <input type="text" id="d3_endTime" class="time_select"/>
+            <input type="button" value="添加Period区间" id="addPeriod">
+            <span id="s3"></span>
+        </form>
+    </div>
+
+    <div id="d4">
+        <form>
+            <span>开始时间: </span>
+            <input type="text" id="d4_startTime" class="time_select"/>
+            <span>结束时间: </span>
+            <input type="text" id="d4_endTime" class="time_select"/>
+            <input type="button" value="添加Range区间" id="addRange"/>
+            <span id="s4"></span>
+        </form>
+    </div>
+
+    <div id="d5">
+        <span>时间区间: </span>
+        <select id="chooseRange" width="300px">
+            <option>请选择</option>
+        </select>
+        <span>奖品名称: </span>
+        <select id="chooseAwardItem">
+            <option>请选择</option>
+        </select>
+        <br><br>
+        <form>
+            <span>往奖品池添加数目: </span>
+            <input type="text" id="skuSize"/>
+            <input type="button" id="addSku" value="加入奖池"/>
+            <span id="s5"></span>
+        </form>
+    </div>
+    <hr/><br>
+    <label>获奖用户配置：</label><br><br>
+    <div id="d6">
+        <span>时间区间: </span>
+        <select id="winChooseRange" width="300px">
+            <option>请选择</option>
+        </select>
+        <span>奖品名称: </span>
+        <select id="winChooseAwardItem">
+            <option>请选择</option>
+        </select>
+        <br><br>
+        <form>
+            <label>获奖用户: </label>
+            <input id="userId"/>
+            <input type="button" id="winAward" value="添加"/>
+            <span id="s6"></span>
+        </form>
+    </div>
+</div>
+</body>
+</html>
