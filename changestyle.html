@@ -4,17 +4,36 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>改变样式</title>
         <script type="text/javascript" src = "js/changestyle.js"  charset="gbk"></script>
+        <style type="text/css">
+           body{font-size: 12px;}
+           #xing{
+               height:300px;
+               width:500px;
+               border: #33081f solid 1px;
+               padding:5px;
+           }
+            p{
+                line-height:18px;
+                text-indent:2em;
+            }
+
+        </style>
     </head>
     <body>
-        <p id = "xing">1. 星星喜欢看电影</p>
-        <p id = "yan">2. 星星喜欢睡觉</p>
-        <p id = "lin">3. 星星喜欢吃面条</p>
-        <p id = "wang">4. 星星写代码很厉害</p>
+        <h2 id = "title">星星专属篇</h2>
+        <div id = "xing">
+            <P> 1. 星星喜欢看电影</p>
+            <p> 2. 星星喜欢睡觉</p>
+            <p> 3. 星星喜欢吃面条</p>
+            <p> 4. 星星写代码很厉害</p>
+        </div>
+
         <form>
-            <input id = "xing" type = button value = "改变颜色" onclick="changecolor()" />
-            <input id = "yan" type = button value = "改变高低" onclick="changecolor()" />
-            <input id = "ling" type = button value = "显示内容" onclick="changecolor()" />
-            <input id = "wang" type = button value = "隐藏内容" onclick="changecolor()" />
+            <input type = "button" value = "改变颜色" onclick="changecolor()" />
+            <input type = "button" value = "改变高低" onclick="changewidth()" />
+            <input type = "button" value = "隐藏内容" onclick="hide()" />
+            <input type = "button" value = "显示内容" onclick="display()" />
+            <input type = "button" value = "取消设置" onclick="cancel()" />
         </form>
     </body>
 
