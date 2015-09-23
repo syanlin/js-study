@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>打印班级成绩</title>
+    <script>
+        var mydate = new Date();
+        var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+        var year = mydate.getFullYear();
+        var month = mydate.getMonth();
+        var date = mydate.getDate();
+        var day = weekday[mydate.getDay()];
+        document.write(year + "年" + month + "月" + date + "日    " + day);
+
+        var score = "小明:87; 小花:81; 小红:97; 小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+        var arry = score.split(";");
+        var sum = 0;
+        var avge = 0;
+        for (var i = 0; i < arry.length; i++)
+        {
+
+        }
+        document.write(year + "年" + month + "月" + date + "日    " + day + "--班级总分为:" + avrange);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
