@@ -18,9 +18,12 @@
         var avge = 0;
         for (var i = 0; i < arry.length; i++)
         {
+            var index = arry[i].indexOf(":") + 1;
+            sum += parseInt(arry[i].substr(index, 2));
 
         }
-        document.write(year + "年" + month + "月" + date + "日    " + day + "--班级总分为:" + avrange);
+        avge = Math.round(sum / arry.lenth);
+        document.write("--班级总分为:" + avge);
     </script>
 </head>
 <body>
