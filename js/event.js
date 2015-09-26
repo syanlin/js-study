@@ -22,5 +22,5 @@ function count()
             rs = x / y;
             break;
     }
-    rs = document.getElementById("rs").value;
+    document.getElementById("rs").value = rs;
 }

@@ -15,15 +15,15 @@
         var score = "小明:87; 小花:81; 小红:97; 小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
         var arry = score.split(";");
         var sum = 0;
-        var avge = 0;
+        console.log("length: " + arry.length);
         for (var i = 0; i < arry.length; i++)
         {
+            console.log("i: " + i + ": " + arry[i]);
             var index = arry[i].indexOf(":") + 1;
             sum += parseInt(arry[i].substr(index, 2));
-
         }
-        avge = Math.round(sum / arry.lenth);
-        document.write("--班级总分为:" + avge);
+        var avg = Math.round(sum / arry.length);
+        document.write("--班级总分为:" + avg);
     </script>
 </head>
 <body>
