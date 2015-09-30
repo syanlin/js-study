@@ -6,11 +6,11 @@
     <script type="text/javascript">
         var attime;
         function clock(){
-            var time= new Date();
-            attime = time.getHous() + ":" + time.getMinutes() + ":" + time.getSeconds();
-            document.getElementById("clock").value = attime;
+        var time= new Date();
+        attime = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+        document.getElementById("clock").value = attime;
         }
-        setInterval(clock,100);
+        setInterval(clock,1000);
     </script>
 </head>
 <body>
