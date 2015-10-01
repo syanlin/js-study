@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>浏览器跳转提示页面</title>
+</head>
+<body>
+    <h2>操作成功</h2>
+    <span id="time">5</span>
+    <span>秒回到主页返回</span>
+    <a href = javascript:back()>返回</a>
+    <script  type="text/javascript">
+        var num = document.getElementById("time").innerHTML;
+        function count()
+        {
+            console.log("in count function number:" + num);
+            if (num > 0){
+                document.getElementById("time").innerHTML = num;
+                num--;
+                setTimeout(count, 1000);
+            } else{
+                window.open("http://www.imooc.com/");
+            }
+        }
+        function back()
+        {
+            console.log("back");
+            window.history.back();
+        }
+        count();
+    </script>
+</body>
+</html>
