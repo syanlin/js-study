@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>制作表格</title>
+</head>
+<body>
+    <form name = "input">
+        <table align = "center" width = "500px" height = "%50" border = "1">
+            <tr>
+                <td align = "center" width = "100px">
+                    学号：
+                </td>
+                <td align = "center" width = "300px">
+                    <input type = "text" id = "userid"  name = "user" onblur = "validate();">
+                    <div id = usermsg></div>
+                </td>
+            </tr>
+            <tr>
+                <td align = "center" width = "100px">
+                    姓名：
+                </td>
+                <td align = "center">
+                    <input type = "text" name = "name">
+                </td>
+            </tr>
+            <tr>
+                <td align = "center" width = "%45">
+                    性别：
+                </td>
+                <td align = "center">
+                    <input type = "radio"  name = "sex" value = "男">
+                    男
+                    <input type = "radio" name = "sex" value = "女">
+                    女
+                </td>
+            </tr>
+            <tr>
+                <td align = "center" width = "30%">
+                    年龄：
+                </td>
+                <td align = "center">
+                    <input type = "text"  name = "age">
+                </td>
+            </tr>
+            <tr>
+                <td align = "center" width = "100px">
+                    地址：
+                </td>
+                <td align = "center" width = "300px">
+                    <input type = "text"  name = "addr">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h1 id = "myhead" onclick = "getvalue()">看看三种获取节点的方法? </h1>
+    <p>点击标题弹出它的值</p>
+    <input type = "button" onclick = "sexnum()" value = "看看name为sex的节点有几个？"/>
+    </br>
+    <input type = "button" onclick = "myname()" value = "看看标签名为name有几个？"/>
+    <script>
+        function sexnum(){
+            var mysex = document.getElementsByName("sex");
+            alert(mysex.length);
+        }
+        function myname(){
+            var myN = document.getElementsByTagName("name");
+            alert(myN.length);
+        }
+    </script>
+</body>
+</html>

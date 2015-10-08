@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>认识DOM</title>
+</head>
+<body>
+    <h2 id = "con">I Love Javascript</h2>
+    <p>JavaScript使网页显示动态效果并实现与用户交互功能。</p>
+    <script type = text/javascript>
+        var ele;
+        ele = document.getElementById("con");
+        ele.style.color = "red";
+        ele.style.background = "#CCC";
+        setTimeout("ele.style.display = 'none'", 9000);
+    </script>
+</body>
+</html>
