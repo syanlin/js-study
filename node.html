@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>访问子结点</title>
+</head>
+<body>
+    <div>
+        JavaScript
+        <p>JavaScript</p>
+        <div>Jquery</div>
+        <h5>PHP</h5>
+    </div>
+    <script type = "text/javascript">
+        var x = document.getElementsByTagName("div")[0].childNodes;
+        for (var i = 0; i < x.length; x++){
+            document.write("[第" + (i+1)+"个节点]" + "<br>" + "节点名：" + x[i].nodeName + "<br>" + "节点类型：" + x[i].nodeType + "<br>" +
+            "节点值：" + x[i].nodeValue + "<br>");
+        }
+    </script>
+</body>
+</html>

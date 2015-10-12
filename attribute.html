@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>课程列表</title>
+</head>
+<body>
+    <p id = "intro">课程列表</p>
+    <ul>
+        <li title = "第一个li">HTML</li>
+        <li>CSS</li>
+        <li title = "第三个li">JavaScript</li>
+        <li title = "第四个li">Jquery</li>
+        <li title = "第五个li">Html5</li>
+    </ul>
+    <p>以下为获取的不为空的li标签title值</p>
+    <script type = "text/javascript">
+        var con = document.getElementsByTagName("li");
+        for (var i = 0; i < con.length; i++){
+            var text = con[i].getAttribute("title");
+            if (text != null){
+                document.write(text + "<br>");
+            }
+        }
+
+    </script>
+</body>
+</html>
