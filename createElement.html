@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+</head>
+<body>
+<script type="text/javascript">
+    var main = document.body;
+    //创建链接
+    function createa(url,text)
+    {
+        var a = document.createElement("a");
+        a.setAttribute("href",url);
+        a.innerHTML = text；
+    a.style.color = "red";
+        main.appendChild(a);
+
+    }
+    // 调用函数创建链接
+    createa("http://www.imooc.com", "慕课网")；
+
+</script>
+</body>
+</html> 
