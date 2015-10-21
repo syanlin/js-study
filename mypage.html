@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>表单综合</title>
+</head>
+<body>
+<h1>个人主页</h1>
+<hr/>
+<h3>你想了解我吗？</h3>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;大家好,我是武汉大学计算机学院14级本科生，我的名字叫马宪政，很高兴认识你们！我刚学习完表单，
+    想把以上几章所学的内容在一个网页上展现出来，如果有幸被你看到，觉得还可以就点个赞吧！</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在此，我想把我的座右铭送给大家与大家共勉：
+<blockquote>有志者，事竟成，破釜沉舟,百二秦关终属楚；<br/>
+    苦心人，天不负，卧薪尝胆,三千越甲可吞吴。
+</blockquote>
+</p>
+<hr/>
+<h3>我的爱好是什么呢？</h3>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;我的爱好比较广泛，喜欢唱歌、跳舞（鬼步舞），也喜欢各种运动: </p>
+<ul>
+    <li>篮球</li>
+    <li>台球</li>
+    <li>乒乓球</li>
+    <li>泰拳</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;我也喜欢健身，初二的时候与一位同学扳手腕把手扳骨折了，之后一直萎靡不振，右胳膊至今还有一道长约二十厘米的伤疤。
+    悲桑的话题，下面我们还是来做个调查，运用一下这章学的东西。</p>
+<hr/>
+<h3>我们来做个简单的调查吧！</h3>
+
+<form method="post" action="file.php">
+    <label>姓名：</label>
+    <input type="text" name="name"/>
+    <br/>
+    <label>性别:</label>
+    <label>男</label>
+    <input type="radio" name="sex"/>
+    <label>女</label>
+    <input type="radio" name="sex"/>
+    <br/>
+    <label>学校：</label>
+    <select>
+        <option value="武汉大学">武汉大学</option>
+        <option value="华中科技大学" selected="selected">华中科技大学</option>
+        <option value="中南财经政法大学">中南财经政法大学</option>
+        <option value="湖北省经济与管理学院">湖北省经济与管理学院</option>
+    </select>
+    <br/>
+    <label>爱好：</label>
+    <select multiple="multiple">
+        <option value="网游" selected="selected">网游</option>
+        <option value="唱歌">唱歌</option>
+        <option value="跳舞">跳舞</option>
+        <option value="运动">运动</option>
+    </select>
+    <br/>
+    <label>个人介绍：</label>
+    <textarea cols="40" rows="8"></textarea>
+    <br/>
+    <label>QQ号：</label>
+    <input type="text" name="QQ">
+    <br/>
+    <label>密码：</label>
+    <input type="password" name="pass"/>
+    <br>
+
+    <p>没时间了，就先到这吧，谢谢观看！ </p>
+    <hr/>
+</form>
+</body>
+</html>
