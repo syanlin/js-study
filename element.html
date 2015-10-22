@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>行内元素标签</title>
+    <style type="text/css">
+        a,span,em{
+            background:pink;
+            display:inline-block;
+            border:2px solid #3acded;
+            padding:10px;
+            margin:0px;
+            border-radius:8px;
+        }
+       a:hover{
+            background:#39ccad;
+            border-color:pink;
+        }
+        .number{
+            display:inline-block;
+            width: 20px;
+            height: 20px;
+            background: none;
+            text-align: center;
+            box-shadow: 1px 1px 15px #00c5ff;
+        }
+        .number:hover{
+            background:#00C5FF;
+            color:#FFF;
+            box-shadow:1px 1px 1px #000;
+            transition: box-shadow 1s, background 1s;
+        }
+    </style>
+</head>
+<body>
+<a href="http://www.baidu.com">百度</a>
+<a href="http://www.imooc.com">慕课网</a>
+<span>33333</span>
+<span>44444</span><em>555555</em>
+<br/>
+<ul>
+    <li class="number">1</li>
+    <li class="number">2</li>
+    <li class="number">3</li>
+    <li class="number">4</li>
+</ul>
+</body>
+</html>
