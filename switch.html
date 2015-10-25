@@ -59,23 +59,24 @@
     </style>
     <script type="text/javascript">
         //实现选项卡切换
-        window.onload = function () {
-            var otabs = document.getElementById("tabs");
-            var oul = otabs.getElementsByTagName("ul")[0];
-            var oli = oul.getElementsByTagName("li");
-            var odiv = otabs.getElementsByTagName("div");
-            for (var i = 0; i < oli.length; i++) {
-                oli[i].index = i;
-                oli[i].onclick = function () {
-                    for (var n = 0; n < oli.length; n++) {
-                        oli[n].classname = "";
-                        odiv[n].classname = "hide";
+        window.onload=function(){
+            var otabs=document.getElementById("tabs");
+            var oul=otabs.getElementsByTagName("ul")[0];
+            var oli=oul.getElementsByTagName("li");
+            var odiv=otabs.getElementsByTagName("div");
+            for(var i=0; i<oli.length; i++){
+                oli[i].index=i;
+                oli[i].onclick = function(){
+                    for(var n =0; n<oli.length;n++){
+                        oli[n].className="";
+                        odiv[n].className="hide"
                     }
-                    this.classname = "on";
-                    odiv[this.index].classname = "";
+                    odiv[this.index].className="";
+                    oli[this.index].className="on"
                 }
             }
         }
+
     </script>
 </head>
 <body>
