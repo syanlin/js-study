@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全屏切换效果</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin: 0;
+        }
+        head,body{
+            height: 100%;
+        }
+        #container,.sections,.section{
+            height:100%;
+        }
+        #section0,
+        #section1,
+        #section2,
+        #section3{
+            background-color: #000
+            background-size:cover;
+            background-position:%50 %50;
+            text-align:center;
+            color:white;
+        }
+        #section0{
+            background-image: url(image/1.JPG);
+        }
+        #section1{
+            background-image: url(image/2.JPG);
+        }
+        #section2{
+            background-image: url(image/3.JPG);
+        }
+        #section3{
+            background-image: url(image/4.JPG);
+        }
+        .left{
+            float:left;
+            width:%25;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" style="width: 400%">
+        <div class="sections">
+            <div class="section left" id="section0">
+                <h3>This is the page</h3>
+            </div>
+            <div class="section left" id="section1">
+                <h3>This is the page</h3>
+            </div>
+            <div class="section left" id="section2">
+                <h3>This is the page</h3>
+            </div>
+            <div class="section left" id="section3">
+                <h3>This is the page</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
