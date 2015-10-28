@@ -18,13 +18,23 @@
     <li>椰子</li>
 </ul>
 <a href="javascript:;">更多</a>
-<script type="text/javascript">
-    $(function){
+<script>
+    $(function(){
         $("li:eq(3)").css("display","none");
         $("li:eq(4)").css("display","none");
-
-
-    }
+        $("a").click(function(){
+                    if($("a").text()==="更多"){
+                        $("a").text("简化");
+                        $("li:eq(3)").css("display","list-item");
+                        $("li:eq(4)").css("display","list-item");
+                    } else{
+                        $("a").text("更多");
+                        $("li:eq(3)").css("display","none");
+                        $("li:eq(4)").css("display","none");
+                    }
+                }
+        )
+    })
 
 </script>
 </body>

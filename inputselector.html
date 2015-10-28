@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>:input表单选择器</title>
+    <script language="javascript" type="text/javascript" src="lib/jquery.min.js"></script>
+</head>
+<body>
+<h2>修改全部表单元素的背景色</h2>
+
+<form id="frmTest" action="#">
+    <input type="button" value="Input Button"/><br/>
+    <select>
+        <option>option</option>
+    </select><br/>
+    <textarea rows="3" cols="8"></textarea><br/>
+    <button>Button</button>
+    <br/>
+</form>
+<script type="text/javascript">
+    $("#frmTest :input").addClass("bg_blue");
+</script>
+</body>
+</html>
