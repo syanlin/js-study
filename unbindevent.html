@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>移除绑定事件</title>
+    <script language="javascript" type="text/javascript" src="lib/jquery.min.js"></script>
+    <style type="text/css">
+        div{
+            width: 160px;
+            border:1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        .color{
+            color: orange;
+        }
+        .backcolor{
+            background-color: orange;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h3>unbind（）移除绑定事件</h3>
+    <input id="btntest" type="button" value="移除事件"/>
+    <div>土豪，咱们交个朋友吧</div>
+    <script type="text/javascript">
+        $(function(){
+            $("div").bind("click",function(){
+                $(this).removeClass("backcolor").addClass("color");
+            }).bind("dblclick",function(){
+                $(this).removeClass("color").addClass("backcolor");
+            });
+            $("#btntest").bind("click",function(){
+                $("div").unbind("dblclick click")
+                $(this).attr("disabled",true);
+            });
+        });
+    </script>
+</body>
+</html>
