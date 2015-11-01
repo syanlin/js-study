@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>调用animate()方法制作简单的动画效果</title>
+    <script language="javascript" type="text/javascript" src="lib/jquery.min.js"></script>
+    <style type="text/css">
+        span {
+            float: left;
+            border: solid 1px #cccccc;
+            margin: 0px 8px;
+            background-color: blue;
+            color: white;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<h3>制作简单的动画效果</h3>
+<span></span>
+<div id="tip"></div>
+<script type="text/javascript">
+    $(function () {
+        $("span").animate({
+            width:"160px",
+            height:"160px"
+        },
+        5000, function () {
+            $("#tip").html("执行完成");
+         });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>使用slide Toggle方法实现“变脸”效果</title>
+    <script language="javascript" type="text/javascript" src="lib/jquery.min.js"></script>
+    <style type="text/css">
+        div{
+            margin:20px;
+            border:1px solid #cccccc;
+            width:260px;
+        }
+        ul{
+            list-style-type: none;
+            padding: 5px;
+            margin: 0px;
+            display: none;
+        }
+        li{margin:1px;}
+        h4{
+            background-color: #eeeeee;
+            padding:5px;
+            margin: 0px;
+            height: 23px;
+            line-height: 23px;
+        }
+        .f1{float: left;}
+        .f2{float: right;}
+    </style>
+</head>
+<body>
+    <h3>使用slide Toggle方法切换滑动效果</h3>
+    <div>
+        <h4>
+            <span class="f1">我喜欢吃的水果</span>
+            <span class="f2" id="spnTip">向下滑</span>
+        </h4>
+        <ul>
+            <li>苹果</li>
+            <li>芒果</li>
+            <li>柚子</li>
+        </ul>
+        <!--<p>input元素起的作用是什么</p>-->
+        <!--var $spn=$(#spnTip)怎么会这样定义-->
+        <input id="hidval" type="hidden" value="0"/>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            var $spn=$("#spnTip");
+            $("h4").bind("click",function(){
+                $("ul").slideToggle(1500,function(){
+                    $spn.html()=="向下滑"?$spn.html("向上滑"):$spn.html("向下滑");
+                })
+            })
+        })
+    </script>
+</body>
+</html>
