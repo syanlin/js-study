@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>调用stop()方法停止当前所有动画效果</title>
+    <script language="javascript" type="text/javascript" src="lib/jquery.min.js"></script>
+    <style type="text/css">
+        span{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border:1px solid #cccccc;
+            margin: 0px 8px;
+            background-color: red;
+            color: white;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <h3>调用stop()方法停止当前所有动画效果</h3>
+    <span></span>
+    <input id="btnStop" type="button" value="停止"/>
+    <div id="tip"></div>
+    <script type="text/javascript">
+        $(function(){
+            $("span").animate({
+                        left: "+=100px"
+                    }, 3000, function(){
+                    $(this).animate({
+                        height: "+=60px",
+                        width: "+=60px"
+                    },3000,function(){
+                            $("#tip").html("执行完成");
+                    });
+             });
+            $("#btnStop").bind("click",function(){
+                $("span").stop();
+                $("#tip").html("执行停止");
+            });
+        });
+    </script>
+</body>
+</html>

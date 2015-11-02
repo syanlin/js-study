@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jQuery动画特效</title>
+    <script language="javascript" type="text/javascript" src="lib/jquery.min.js"></script>
+    <style type="text/css">
+        span{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            margin: 40px 200px;
+            background-color: blueviolet;
+            color:black;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <span></span>
+    <input id="btn1" type="button" value="左移"/>
+    <input id="btn2" type="button" value="右移"/>
+    <script type="text/javascript">
+        $(function(){
+            var ltime=0;
+            var rtime=0;
+           $("#btn1").bind("click",function() {
+               ltime++;
+               $("span").animate({
+                   left: "-=50px"
+               }, 1000, function () {
+                   $("span").html("左移第" + ltime + "次");
+               });
+           });
+           $("#btn2").bind("click",function(){
+               rtime++;
+               $("span").animate({
+                   left: "+=50px"
+               },1000,function(){
+                   $("span").html("右移第" + rtime +"次");
+               });
+           });
+        });
+    </script>
+</body>
+</html>
