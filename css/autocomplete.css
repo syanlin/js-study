@@ -1,1 +1,36 @@
-#divtest
+#divtest {
+    width: 282px;
+}
+
+#divtest .title {
+    padding: 8px;
+    background-color: blue;
+    color: palegreen;
+    height: 23px;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#divtest .content {
+    padding: 8px 0px;
+    background-color: #00dd1c;
+    font-size: 13px;
+}
+
+#divtest .content.tip {
+    text-align: center;
+    border: solid 1px #007fff;
+    background-color: #D11E1E;
+    margin: 20px 0px;
+    padding: 8px;
+    display: none;
+}
+
+.f1 {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

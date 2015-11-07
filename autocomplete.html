@@ -14,10 +14,24 @@
             <span class="fl">搜索插件</span>
         </div>
         <div class="content">
-            <span class="f1">用户名</span>
-            <input id="textSearch" type="text" name="textSearch"/>
+            <span class="f1">用户名</span><br>
+            <input id="textSearch" type="text" name="textSearch" autocomplete="off" placeholder="Search"/>
             <div class="tip"></div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(function(){
+            var proposals = ['at', 'boat', 'bear', 'chief', 'dog', 'drink', 'elephant', 'fruit', 'grave',
+                'hotel', 'illness', 'London', 'motorbike'];
+            $("#textSearch").autocomplete({
+                hints: proposals,
+                width: 300,
+                height: 30,
+                onSubmit: function(text){
+                    $('.tip').html('Selected: <b>' + text + '</b>');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
