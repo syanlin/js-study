@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>自定义一个jquery插件</title>
+    <script language="javascript" type="text/javascript" src=lib/jquery.min.js"></script>
+</head>
+<body>
+    <div id="divtest">
+        <ul>水果
+            <li>苹果</li>
+            <li>鸭梨</li>
+            <li>柚子</li>
+            <li>芒果</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        (function($){
+            $.extend({
+                "LiFocus":function(myli){
+                    myli.css("background-color:","pink");
+                },
+                "LiBlur":function(myli){
+                    myli.css("background-color:","red");
+                }
+            });
+        })(jQuery);
+        $(function(){
+            $("li").bind("mouseover",function(){
+                $.LiFocus($(this));
+            });
+            $("li").bind("mouseout",function(){
+                $.LiBlur($(this));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>获取浏览器名称和版本号</title>
+    <script language="javascript" type="text/javascript" src="jquery-1.9.1/jquery-1.9.1.min.js"></script>
+    <style type="text/css">
+        #divtest {
+            width: 282px;
+        }
+
+        #divtest .title {
+            padding: 8px;
+            background-color: blue;
+            color: white;
+            height: 23px;
+            line-height: 23px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #divtest .content {
+            padding: 8px;
+            background-color: #00dd1c;
+            font-size: 13px;
+        }
+
+        .f1 {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div id="divtest">
+    <div class="title">
+        <span class="f1">获取浏览器名称和版本号</span>
+    </div>
+    <div id="content"></div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var strTmp = "您的浏览器名称是：";
+        if ($.browser.chrome) {
+            strTmp += "Chrome";
+        }
+        if ($.browser.mozilla) {
+            strTmp += "Mozilla FireFox";
+        }
+        strTmp += "<br /><br />版本号是：" + $.browser.version;
+        $(".content").html(strTmp);
+    })
+</script>
+</body>
+</html>
+11-6有问题
